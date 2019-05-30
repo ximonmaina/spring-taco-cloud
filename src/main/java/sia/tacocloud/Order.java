@@ -6,9 +6,17 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import java.util.Date;
+import java.util.List;
 
 @Data
 public class Order {
+
+    private Long id;
+
+    private Date placedAt;
+
+    private List<Taco> tacos;
 
     //end::allButValidation[]
     @NotBlank(message="Name is required")
